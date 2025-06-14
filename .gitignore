@@ -1,0 +1,37 @@
+# Python specific ignored files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.env                # Your .env file for environment variables (API keys!)
+.project
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+pip-log.txt
+pip-delete-this-arg.txt
+.venv/               # Common virtual environment directory
+
+# IDE specific files (add/remove based on your IDE)
+.idea/               # JetBrains IDEs (PyCharm, IntelliJ)
+.vscode/             # VS Code (if you have workspace settings here you don't want to share)
+*.swp                # Vim swap files
+*.swo
+*.swn
+*~                   # Backup files created by some editors
+
+# Streamlit specific (if any)
+.streamlit/          # Streamlit's internal configuration/cache (often safe to ignore if not custom)
+
+# Operating System Files
+.DS_Store            # macOS
+Thumbs.db            # Windows
+Desktop.ini          # Windows
+
+# Logs and Data
+*.log                # Any log files your app might generate
+data/                # If you store saved games or other temporary data here
+saved_games/         # Specific directory for saved games (e.g., JSON files)
