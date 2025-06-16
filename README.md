@@ -83,6 +83,7 @@ Once everything is set up, run the Streamlit application:
 ```bash
 streamlit run app.py
 ```
+```
 Project Structure
 .
 ├── app.py                     # Main Streamlit application and UI logic
@@ -94,32 +95,19 @@ Project Structure
 ├── .gitignore                 # Specifies files/folders to be ignored by Git
 ├── requirements.txt           # Lists Python dependencies
 └── README.md                  # This file
+```
+## 💡 Future Improvements
+**More Complex Inventory:** Implement item usage, combining items, or persistent effects.
+**Combat System:** Introduce turn-based combat with enemies, damage calculations, and different attack options.
+**Dialogue System:** NPCs with branching dialogue trees.
+**Saving/Loading Game:** Persist game state across sessions.
+**Enhanced Plot Flags:** More intricate branching storylines and consequence tracking.
+**Error Handling:** More graceful handling of LLM generation failures.
+**More Diverse Locations/Encounters:** Expand the world with more unique places and events.
+**Sound/Music:** Add audio elements for immersion.
 
-🎮 Game Mechanics Details
-Player State: Managed by src/state.py, tracking health, inventory, current_location_id, etc.
-Game Flow (src/agent.py):
-game_start_node: The initial entry point.
-route_game_step: A router function that decides if the agent needs to process user input or describe a new scene.
-handle_user_choice: Processes player input, applies health changes, updates location, and checks for game over. This is where per-turn health decrease happens.
-update_location_name: Uses an LLM to generate a descriptive name for the new location.
-describe_scene: Generates the story text and available choices for the current scene using an LLM.
-The graph intelligently transitions between these nodes and terminates at END after each complete "turn" (choice processed, new scene generated).
-Health System:
-Starts at 100 health.
-Decreases by 10 points after every choice (every turn).
-Can be affected by specific narrative events (e.g., gaining health from an item).
-Game ends if health drops to 0 or below.
-💡 Future Improvements
-More Complex Inventory: Implement item usage, combining items, or persistent effects.
-Combat System: Introduce turn-based combat with enemies, damage calculations, and different attack options.
-Dialogue System: NPCs with branching dialogue trees.
-Saving/Loading Game: Persist game state across sessions.
-Enhanced Plot Flags: More intricate branching storylines and consequence tracking.
-Error Handling: More graceful handling of LLM generation failures.
-More Diverse Locations/Encounters: Expand the world with more unique places and events.
-Sound/Music: Add audio elements for immersion.
-🤝 Contributing
+## 🤝 Contributing
 Feel free to fork the repository, open issues, or submit pull requests with improvements!
 
-📄 License
+## 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details (you would create a LICENSE file in your root directory if you want a formal license, e.g., by copying from choosealicense.com).
