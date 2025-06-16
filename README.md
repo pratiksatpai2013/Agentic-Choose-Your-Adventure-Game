@@ -82,7 +82,7 @@ Once everything is set up, run the Streamlit application:
 
 ```bash
 streamlit run app.py
-
+```
 Project Structure
 .
 ├── app.py                     # Main Streamlit application and UI logic
