@@ -6,7 +6,7 @@ __pycache__/
 .Python
 env/
 venv/
-*.env                # Your .env file for environment variables (API keys!)
+.env                # Your .env file for environment variables (API keys!)
 .project
 .pytest_cache/
 .mypy_cache/
